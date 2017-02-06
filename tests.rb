@@ -39,7 +39,7 @@ class CaffeineTest < MiniTest::Test
 
   def test_espresso_has_greater_effect
     joe = Human.new "Jim"
-    joe
+    joe 
   end
 
 

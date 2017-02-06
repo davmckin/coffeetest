@@ -25,8 +25,15 @@ class Human
   end
 
   def drink!
-    coffee.coffee_amount -=1
-    self.alertness += 0.31
+    coffee_amount -=1
+    if Coffee
+      self.alertness += coffee.alertness
+    elsif Espresso
+      self.alertness += coffee.alertness
+    elsif Tea
+      self.alertness += coffee.alertness
+    else puts "We don't serve that drink here"
+    end
   end
 
 end

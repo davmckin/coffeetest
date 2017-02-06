@@ -1,10 +1,11 @@
 class Coffee
 
-  attr_accessor :coffee_name, :coffee_amount
+  attr_accessor :coffee_name, :coffee_amount, :alertness
 
-  def initialize(coffee_name, coffee_amount=3)
+  def initialize(coffee_name, coffee_amount=3, alertness = 0.31)
     @coffee_name = coffee_name
     @coffee_amount = coffee_amount
+    @alertness = alertness
   end
 
 def full?
@@ -20,4 +21,20 @@ end
     else false
     end
   end
+end
+
+class Espresso < Coffee
+
+def initalize(coffee_amount=1, alertness=0.4)
+  @coffee_amount = coffee_amount
+  @alertness = alertness
+end
+end
+
+class Tea < Coffee
+
+def initalize(coffee_amount=3, alertness=0.25)
+  @coffee_amount = coffee_amount
+  @alertness = alertness
+end
 end
