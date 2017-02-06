@@ -14,5 +14,10 @@ def full?
   end
 end
 
-
+  def empty?
+    if coffee_amount ==0
+      then true
+    else false
+    end
+  end
 end

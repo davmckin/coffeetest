@@ -5,7 +5,7 @@ class Human
 
   def initialize(name, alertness=0)
     self.name = name
-    self.alertness = alertness
+    self.alertness = alertness.to_f
     @coffee = coffee
   end
 
@@ -26,6 +26,7 @@ class Human
 
   def drink!
     coffee.coffee_amount -=1
+    self.alertness += 0.31
   end
 
 end
