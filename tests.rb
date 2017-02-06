@@ -39,7 +39,12 @@ class CaffeineTest < MiniTest::Test
 
   def test_espresso_has_greater_effect
     joe = Human.new "Jim"
-    joe 
+    espr = Espresso.new "espr"
+    assert espr.full?
+
+    joe.buy espr
+    joe.drink!
+    assert(joe.alertness > 0.31)
   end
 
 
