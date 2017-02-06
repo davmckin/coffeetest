@@ -36,4 +36,11 @@ class CaffeineTest < MiniTest::Test
     assert tsmf.empty?
     assert trevor.alertness > 0.9
   end
+
+  def test_espresso_has_greater_effect
+    joe = Human.new "Jim"
+    joe
+  end
+
+
 end
