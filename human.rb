@@ -1,12 +1,16 @@
 class Human
   attr_accessor :name,
                 :alertness,
-                :coffee
+                :coffee,
+                :espresso,
+                :tea
 
   def initialize(name, alertness=0)
     self.name = name
     self.alertness = alertness.to_f
     @coffee = coffee
+    @espresso = espresso
+    @tea = tea
   end
 
   def has_coffee?
@@ -25,13 +29,13 @@ class Human
   end
 
   def drink!
-    coffee_amount -=1
+    coffee.coffee_amount -=1
     if Coffee
       self.alertness += coffee.alertness
     elsif Espresso
-      self.alertness += coffee.alertness
+      self.alertness += espresso.alertness
     elsif Tea
-      self.alertness += coffee.alertness
+      self.alertness += tea.alertness
     else puts "We don't serve that drink here"
     end
   end

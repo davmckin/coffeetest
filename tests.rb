@@ -47,5 +47,4 @@ class CaffeineTest < MiniTest::Test
     assert(joe.alertness > 0.31)
   end
 
-
 end
